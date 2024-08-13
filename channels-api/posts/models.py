@@ -31,7 +31,7 @@ class Statistic(models.Model):
 class DataItem(models.Model):
 
     statistic = models.ForeignKey(Statistic, on_delete=models.CASCADE)
-    value = models.PositiveIntegerField
+    value = models.PositiveIntegerField()
     owner = models.CharField(max_length=255)
 
     def __str__(self):
